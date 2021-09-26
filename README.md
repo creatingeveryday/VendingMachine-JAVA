@@ -6,6 +6,7 @@
 - 돈 투입시 자판기의 투입 금액 표시 기능 
 - 투입금액에 따라 주문가능한 음료 표시 기능
 - 재고가 없으면 음료 구매 할 수 없음
+
 ![flowChart](./img/firstupdate.png)
 #### 3. Flow chart
 
