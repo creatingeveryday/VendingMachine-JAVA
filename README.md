@@ -8,6 +8,7 @@
 - 재고가 없으면 음료 구매 할 수 없음
 
 ![flowChart](./img/firstupdate.png)
+
 #### 3. Flow chart
 
 ### Flow Chart
