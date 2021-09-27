@@ -194,7 +194,7 @@ public class Prompt {
 		while (money < 900) {
 			p.printMenu(p.order);
 			p.inputMoney(scanner);
-			if (p.canBuy()) {
+			if (p.canBuy()|| !(onLoop)) {
 				break;
 			}
 		}
@@ -216,9 +216,9 @@ public class Prompt {
 						break;
 					}
 
-				 }
 				}
-			
+			}
+
 			if (input.equals("q") || !(onLoop)) {
 				if (money > 0) {
 					System.out.println(money + "원을 반환하고 종료합니다.");
