@@ -2,7 +2,7 @@
 
 #### 0. 작동
 
-<img width ="20%" src="https://user-images.githubusercontent.com/87915542/134854753-15fd1383-3a3b-444a-86ad-a4123b117e63.gif"/>
+<img width ="100%" src="https://user-images.githubusercontent.com/87915542/134854753-15fd1383-3a3b-444a-86ad-a4123b117e63.gif"/>
 
 #### 1. [2021-09-25] 순서도 작성 
 코드를 작성하기전에 논리를 구성해보는 것도 도움이 된다. 
