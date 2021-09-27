@@ -1,4 +1,9 @@
 # JavaVendingMachine
+
+#### 0. 작동
+
+<img width ="{20%}" src="{.img/vendingMachineSample.gif}"
+
 #### 1. [2021-09-25] 순서도 작성 
 코드를 작성하기전에 논리를 구성해보는 것도 도움이 된다. 
 - [Flow Chart](#3-flow-chart) 
