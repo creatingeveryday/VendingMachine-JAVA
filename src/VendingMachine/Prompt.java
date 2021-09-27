@@ -212,7 +212,7 @@ public class Prompt {
 					p.sodaLightHandler();
 					p.printMenu("a.추가로 투입 q.취소하고 종료");
 					p.inputMoney(scanner);
-					if (p.canBuy() || money == 0) {
+					if (p.canBuy() || !(onLoop)) {
 						break;
 					}
 
