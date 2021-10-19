@@ -76,12 +76,12 @@ class SodaMachine {
 			};
 	
 	public void buy(Product p) {    // 자판기에서 음료수 구매하기 
-		if(p.stock <= 0){
-			System.out.println("재고가 부족합니다.");
-			return;
-		}
 		if(money < p.price) {
 			System.out.println("돈이 부족합니다.");
+			return;
+		}
+		if(p.stock <= 0){
+			System.out.println("재고가 부족합니다.");
 			return;
 		}
 		money -= p.price;
