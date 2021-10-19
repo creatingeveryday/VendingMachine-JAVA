@@ -132,30 +132,30 @@ public class UpgradedMachine {
 
 	public static void main(String[] args) {
 		// 기존의 자판기를 리팩토링한 파일입니다.
-		SodaMachine s = new SodaMachine();
-		final int MAX = s.item.length;  //현재 생성된 자판기인스턴스의 음료 목록의 총 개수를 저장한다.
+		SodaMachine machine = new SodaMachine();
+		final int MAX = machine.item.length;  //현재 생성된 자판기인스턴스의 음료수 배열의 총 개수를 저장한다.
 		Scanner scanner = new Scanner(System.in);
 		
 		while(true) {
-			s.showInterface(); // 메뉴 출력
+			machine.showInterface(); // 메뉴 출력
 			int input = scanner.nextInt();  // 명령 입력
 			
-			if(input == s.item.length+2) {   //종료
-				s.refund();
+			if(input == machine.item.length+2) {   //종료
+				machine.refund();
 				scanner.close();
 				break;
 			}
 			
-			if(input == s.item.length+1) {   //돈 추가 투입
+			if(input == machine.item.length+1) {   //돈 추가 투입
 				System.out.println("투입할 금액을 입력하세요.");
 				int money = scanner.nextInt();
-				s.putMoney(money);
-				s.showInterface();
+				machine.putMoney(money);
+				machine.showInterface();
 				continue;
 			}
 		
 			if(1<= input && input <= MAX) {     // 음료수 구매
-				s.buy(s.item[input-1]);
+				machine.buy(machine.item[input-1]);
 			}
 		} //while문 종료. 
 	
