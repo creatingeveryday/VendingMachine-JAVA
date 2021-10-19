@@ -22,6 +22,9 @@
 - 자판기 객체에서는 메뉴 출력, 구매, 반환, 금액 투입 기능이 구현되었습니다.
 - 객체개념을 활용해보니 코드 작성량이 감소하면서도 유지보수가 편리해졌습니다.
 
+<img width ="100%" src="https://user-images.githubusercontent.com/87915542/137838346-6b13a6a3-ff6e-4761-96de-05d68b166408.gif"/>
+
+
 ![newMachine](./img/newMachine.png)
 
 #### 4. Flow chart
