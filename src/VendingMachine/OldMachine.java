@@ -2,7 +2,7 @@ package VendingMachine;
 
 import java.util.Scanner;
 
-public class Prompt {
+public class OldMachine {
 	String[] sodaName = { "코카콜라", "사이다", "오렌지주스", "사과주스", "포도주스" };
 	int[] sodaPrice = { 900, 1000, 1700, 1900, 2200 };
 	int[] sodaStock = { 5, 4, 3, 2, 1 };
@@ -12,15 +12,12 @@ public class Prompt {
 	static boolean onLoop = true;
 
 	public void printMenu(String order) {
-		// 음료 메뉴 출력 +현재 투입된 돈 최신화 하면서 출력 인터페이스
-
+		// 음료 메뉴 및 현재 투입된 돈 출력
 		System.out.println("┌-------------------------------");
 		System.out.println("|        < 시원한 음료수 자판기 >");
-		System.out.printf("| %s 코카콜라(%s원)\n", light[0], sodaPrice[0]);
-		System.out.printf("| %s 사이다(%s원)\n", light[1], sodaPrice[1]);
-		System.out.printf("| %s 오렌지주스(%s원)\n", light[2], sodaPrice[2]);
-		System.out.printf("| %s 사과주스(%s원)\n", light[3], sodaPrice[3]);
-		System.out.printf("| %s 포도주스(%s원)\n", light[4], sodaPrice[4]);
+		for(int i =0 ; i < sodaName.length; i++ ) {
+			System.out.printf("| %s %s(%s원)\n",light[i],sodaName[i], sodaPrice[i]);
+		}
 		System.out.printf("|       < 투입한 금액 :%4d원 >\n", money);
 		System.out.println("└-------------------------------");
 		System.out.println(order);
@@ -121,7 +118,7 @@ public class Prompt {
 				money = money - sodaPrice[a - 1];
 				System.out.println(sodaName[a - 1] + "구매 완료!");
 			} else {
-				System.out.printf("%s의 재고가 없습니다.", sodaName[a - 1]);
+				System.out.printf("%s의 재고가 없습니다.%n", sodaName[a - 1]);
 			}
 		}
 		if (input.equals("2")) {
@@ -131,7 +128,7 @@ public class Prompt {
 				money = money - sodaPrice[a - 1];
 				System.out.println(sodaName[a - 1] + "구매 완료!");
 			} else {
-				System.out.printf("%s의 재고가 없습니다.", sodaName[a - 1]);
+				System.out.printf("%s의 재고가 없습니다.%n", sodaName[a - 1]);
 			}
 		}
 		if (input.equals("3")) {
@@ -141,7 +138,7 @@ public class Prompt {
 				money = money - sodaPrice[a - 1];
 				System.out.println(sodaName[a - 1] + "구매 완료!");
 			} else {
-				System.out.printf("%s의 재고가 없습니다.", sodaName[a - 1]);
+				System.out.printf("%s의 재고가 없습니다.%n", sodaName[a - 1]);
 			}
 		}
 		if (input.equals("4")) {
@@ -152,7 +149,7 @@ public class Prompt {
 				System.out.println(sodaName[a - 1] + "구매 완료!");
 
 			} else {
-				System.out.printf("%s의 재고가 없습니다.", sodaName[a - 1]);
+				System.out.printf("%s의 재고가 없습니다.%n", sodaName[a - 1]);
 			}
 		}
 		if (input.equals("5")) {
@@ -162,7 +159,7 @@ public class Prompt {
 				money = money - sodaPrice[a - 1];
 				System.out.println(sodaName[a - 1] + "구매 완료!");
 			} else {
-				System.out.printf("%s의 재고가 없습니다.", sodaName[a - 1]);
+				System.out.printf("%s의 재고가 없습니다.%n", sodaName[a - 1]);
 			}
 		}
 		if (input.equals("a")) {
@@ -187,7 +184,7 @@ public class Prompt {
 	}
 
 	public static void main(String[] args) {
-		Prompt p = new Prompt();
+		OldMachine p = new OldMachine();
 		Scanner scanner = new Scanner(System.in);
 
 		// 주문가능할때까지 반복문 실행. 자판기 투입금액 업데이트.
